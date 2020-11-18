@@ -1,28 +1,28 @@
 # GitHub 
 
-This package models GitHub data from [Fivetran's connector](https://fivetran.com/docs/applications/github). It uses data in the format described by [this ERD](https://docs.google.com/presentation/d/1lx6ez7-x-s-n2JCnCi3SjG4XMmx9ysNUvaNCaWc3I_I/edit).
+This package models GitHub data from [Fivetran's connector](https://fivetran.com/docs/applications/GitHub). It uses data in the format described by [this ERD](https://docs.google.com/presentation/d/1lx6ez7-x-s-n2JCnCi3SjG4XMmx9ysNUvaNCaWc3I_I/edit).
 
-This package enables you to better understand your GitHub issues and pull requests.  Its main focus is to enhance these two core objects with commonly used metrics. Additionally, the metrics tables let you better understand your team's velocity over time.  These metrics are available on a daily, weekly, monthly and quarterly level.
+This package enriches your Fivetran data by doing the following:
+* Adds descriptions to tables and columns that are synced using Fivetran
+* Adds freshness tests to source data
+* Adds column-level testing where applicable. For example, all primary keys are tested for uniqueness and non-null values.
+* Models staging tables, which will be used in our transform package
 
 ## Models
 
-This package contains transformation models, designed to work simultaneously with our [GitHub source package](https://github.com/fivetran/dbt_github_source). A dependency on the source package is declared in this package's `packages.yml` file, so it will automatically download when you run `dbt deps`. The primary outputs of this package are described below. Intermediate models are used to create these output models.
-
-| **model**                  | **description**                                                                                                                                               |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| github\_issues             | Each record represents a GitHub issue, enriched with data about its assignees, milestones, and time comparisons.                                             |
-| github\_pull\_requests     | Each record represents a GitHub pull request, enriched with data about its repository, reviewers, and durations between review requests, merges and reviews. |
-| github\_daily\_metrics     | Each record represents a single day, enriched with metrics about PRs and issues that were created and closed during that period.                              |
-| github\_weekly\_metrics    | Each record represents a single week, enriched with metrics about PRs and issues that were created and closed during that period.                             |
-| github\_monthly\_metrics   | Each record represents a single month, enriched with metrics about PRs and issues that were created and closed during that period.                            |
-| github\_quarterly\_metrics | Each record represents a single quarter, enriched with metrics about PRs and issues that were created and closed during that period.                          |
+This package contains staging models, designed to work simultaneously with our [GitHub modeling package](https://github.com/fivetran/dbt_github).  The staging models:
+* Remove any rows that are soft-deleted
+* Name columns consistently across all packages:
+    * Boolean fields are prefixed with `is_` or `has_`
+    * Timestamps are appended with `_at`
+    * ID primary keys are prefixed with the name of the table.  For example, the user table's ID column is renamed user_id.
 
 
 ## Installation Instructions
 Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions, or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 
 ## Configuration
-By default, this package will look for your GitHub data in the `github` schema of your [target database](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/configure-your-profile). If this is not where your GitHub data is (perhaps your GitHub schema is `github_fivetran`), add the following configuration to your `dbt_project.yml` file:
+By default, this package will run using your target database and the `github` schema. If this is not where your GitHub data is (perhaps your gitHub schema is `Github_fivetran`), add the following configuration to your `dbt_project.yml` file:
 
 ```yml
 # dbt_project.yml
