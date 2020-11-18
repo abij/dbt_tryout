@@ -109,3 +109,642 @@
 2020-11-18 14:23:52.885274 (Thread-20): handling status request
 2020-11-18 14:23:52.885796 (Thread-20): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f64e0470>]}
 2020-11-18 14:23:52.891361 (Thread-20): sending response (<Response 13136 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:23:59.389020 (MainThread): writing 1 spans (enabled:True), 204 additional messages skipped
+2020-11-18 14:23:59.389223 (MainThread): 
+      name jinja2.compile
+        id 3363511441603591271
+  trace_id 6922463611750969035
+ parent_id None
+   service None
+  resource <memory>
+      type template
+     start 1605709439.3883252
+       end 1605709439.3888612
+  duration 0.000536s
+     error 0
+      tags 
+           jinja2.template_name:<memory>
+           runtime-id:640e5b48d5bc48208f56c906db50b99f, 229 additional messages skipped
+2020-11-18 14:23:59.420224 (MainThread): Connection 'model.github.github_issue_labels' was properly closed.
+2020-11-18 14:23:59.448851 (Thread-21): Parsing macros/adapters.sql
+2020-11-18 14:23:59.469474 (Thread-21): Parsing macros/etc.sql
+2020-11-18 14:23:59.470842 (Thread-21): Parsing macros/catalog.sql
+2020-11-18 14:23:59.477470 (Thread-21): Parsing macros/materializations/table.sql
+2020-11-18 14:23:59.487586 (Thread-21): Parsing macros/materializations/view.sql
+2020-11-18 14:23:59.490595 (Thread-21): Parsing macros/materializations/copy.sql
+2020-11-18 14:23:59.495272 (Thread-21): Parsing macros/materializations/seed.sql
+2020-11-18 14:23:59.498240 (Thread-21): Parsing macros/materializations/incremental.sql
+2020-11-18 14:23:59.512036 (Thread-21): Parsing macros/materializations/snapshot.sql
+2020-11-18 14:23:59.515050 (Thread-21): Parsing macros/core.sql
+2020-11-18 14:23:59.518887 (Thread-21): Parsing macros/adapters/common.sql
+2020-11-18 14:23:59.564023 (Thread-21): Parsing macros/materializations/helpers.sql
+2020-11-18 14:23:59.573499 (Thread-21): Parsing macros/materializations/table/table.sql
+2020-11-18 14:23:59.580640 (Thread-21): Parsing macros/materializations/seed/seed.sql
+2020-11-18 14:23:59.602066 (Thread-21): Parsing macros/materializations/view/view.sql
+2020-11-18 14:23:59.608691 (Thread-21): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-11-18 14:23:59.614017 (Thread-21): Parsing macros/materializations/incremental/helpers.sql
+2020-11-18 14:23:59.615918 (Thread-21): Parsing macros/materializations/incremental/incremental.sql
+2020-11-18 14:23:59.622395 (Thread-21): Parsing macros/materializations/common/merge.sql
+2020-11-18 14:23:59.636779 (Thread-21): Parsing macros/materializations/snapshot/strategies.sql
+2020-11-18 14:23:59.653684 (Thread-21): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-11-18 14:23:59.655562 (Thread-21): Parsing macros/materializations/snapshot/snapshot.sql
+2020-11-18 14:23:59.684644 (Thread-21): Parsing macros/schema_tests/relationships.sql
+2020-11-18 14:23:59.686668 (Thread-21): Parsing macros/schema_tests/not_null.sql
+2020-11-18 14:23:59.688268 (Thread-21): Parsing macros/schema_tests/unique.sql
+2020-11-18 14:23:59.690130 (Thread-21): Parsing macros/schema_tests/accepted_values.sql
+2020-11-18 14:23:59.692910 (Thread-21): Parsing macros/etc/get_custom_database.sql
+2020-11-18 14:23:59.694701 (Thread-21): Parsing macros/etc/query.sql
+2020-11-18 14:23:59.695792 (Thread-21): Parsing macros/etc/datetime.sql
+2020-11-18 14:23:59.704983 (Thread-21): Parsing macros/etc/get_custom_alias.sql
+2020-11-18 14:23:59.706119 (Thread-21): Parsing macros/etc/is_incremental.sql
+2020-11-18 14:23:59.707803 (Thread-21): Parsing macros/etc/get_custom_schema.sql
+2020-11-18 14:23:59.757660 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue_closed_history".
+2020-11-18 14:23:59.775738 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_requested_reviewer_history".
+2020-11-18 14:23:59.793356 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue_comment".
+2020-11-18 14:23:59.810647 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue_assignee".
+2020-11-18 14:23:59.928291 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_user".
+2020-11-18 14:23:59.946217 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_pull_request".
+2020-11-18 14:23:59.964181 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue".
+2020-11-18 14:23:59.984226 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue_merged".
+2020-11-18 14:24:00.002780 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_issue_label".
+2020-11-18 14:24:00.006232 (Thread-21): writing 1 spans (enabled:True), 44 additional messages skipped
+2020-11-18 14:24:00.006379 (Thread-21): 
+      name jinja2.compile
+        id 9456475259541760680
+  trace_id 12227397678333628357
+ parent_id None
+   service None
+  resource <memory>
+      type template
+     start 1605709440.005453
+       end 1605709440.0061262
+  duration 0.000673s
+     error 0
+      tags 
+           jinja2.template_name:<memory>
+           runtime-id:640e5b48d5bc48208f56c906db50b99f, 60 additional messages skipped
+2020-11-18 14:24:00.020963 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_repository".
+2020-11-18 14:24:00.038466 (Thread-21): Acquiring new bigquery connection "model.github_source.stg_github_pull_request_review".
+2020-11-18 14:24:00.263421 (AgentWriter): reported 123 traces in 0.00508s, 1 additional messages skipped
+2020-11-18 14:24:00.263656 (AgentWriter): initialized RateSampler, sample 100% of traces, 63 additional messages skipped
+2020-11-18 14:24:00.324467 (Thread-22): handling status request
+2020-11-18 14:24:00.340228 (Thread-22): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f63c97b8>]}
+2020-11-18 14:24:00.351217 (Thread-22): sending response (<Response 184 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:24:03.499506 (Thread-23): handling status request
+2020-11-18 14:24:03.500194 (Thread-23): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f63e52b0>]}
+2020-11-18 14:24:03.507669 (Thread-23): sending response (<Response 12370 bytes [200 OK]>) to 10.0.14.177
+2020-11-18 14:29:47.170804 (Thread-24): handling status request
+2020-11-18 14:29:47.173388 (Thread-24): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f634f518>]}
+2020-11-18 14:29:47.178401 (Thread-24): sending response (<Response 12370 bytes [200 OK]>) to 10.0.3.20
+2020-11-18 14:29:47.203368 (Thread-25): handling status request
+2020-11-18 14:29:47.203726 (Thread-25): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f63b06d8>]}
+2020-11-18 14:29:47.208712 (Thread-25): sending response (<Response 12370 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:29:47.443810 (Thread-26): handling cli_args request
+2020-11-18 14:29:47.444297 (Thread-26): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f654a390>]}
+2020-11-18 14:29:47.455115 (Thread-26): Connection 'model.github_source.stg_github_pull_request_review' was properly closed.
+2020-11-18 14:29:48.424733 (Thread-26): sending response (<Response 137 bytes [200 OK]>) to 10.0.30.126
+2020-11-18 14:29:48.496336 (MainThread): Partial parsing not enabled
+2020-11-18 14:29:48.497719 (MainThread): Parsing macros/adapters.sql
+2020-11-18 14:29:48.519008 (MainThread): Parsing macros/etc.sql
+2020-11-18 14:29:48.520447 (MainThread): Parsing macros/catalog.sql
+2020-11-18 14:29:48.526559 (MainThread): Parsing macros/materializations/table.sql
+2020-11-18 14:29:48.536961 (MainThread): Parsing macros/materializations/view.sql
+2020-11-18 14:29:48.540846 (MainThread): Parsing macros/materializations/copy.sql
+2020-11-18 14:29:48.546256 (MainThread): Parsing macros/materializations/seed.sql
+2020-11-18 14:29:48.549186 (MainThread): Parsing macros/materializations/incremental.sql
+2020-11-18 14:29:48.564826 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-11-18 14:29:48.567742 (MainThread): Parsing macros/core.sql
+2020-11-18 14:29:48.571629 (MainThread): Parsing macros/adapters/common.sql
+2020-11-18 14:29:48.620423 (MainThread): Parsing macros/materializations/helpers.sql
+2020-11-18 14:29:48.634484 (MainThread): Parsing macros/materializations/table/table.sql
+2020-11-18 14:29:48.641673 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-11-18 14:29:48.666856 (MainThread): Parsing macros/materializations/view/view.sql
+2020-11-18 14:29:48.676499 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-11-18 14:29:48.681642 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-11-18 14:29:48.687982 (Thread-27): handling poll request
+2020-11-18 14:29:48.688481 (Thread-27): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d7240>]}
+2020-11-18 14:29:48.693635 (Thread-27): sending response (<Response 5188 bytes [200 OK]>) to 10.0.23.22
+2020-11-18 14:29:48.683694 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-11-18 14:29:48.690550 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-11-18 14:29:48.705130 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-11-18 14:29:48.722479 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-11-18 14:29:48.724382 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-11-18 14:29:48.753835 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-11-18 14:29:48.755903 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-11-18 14:29:48.757577 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-11-18 14:29:48.759467 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-11-18 14:29:48.762335 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-11-18 14:29:48.764230 (MainThread): Parsing macros/etc/query.sql
+2020-11-18 14:29:48.765405 (MainThread): Parsing macros/etc/datetime.sql
+2020-11-18 14:29:48.775123 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-11-18 14:29:48.776188 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-11-18 14:29:48.777971 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-11-18 14:29:48.789893 (MainThread): Partial parsing not enabled
+2020-11-18 14:29:48.842305 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_closed_history".
+2020-11-18 14:29:48.870369 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_requested_reviewer_history".
+2020-11-18 14:29:48.887251 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_comment".
+2020-11-18 14:29:48.904817 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_assignee".
+2020-11-18 14:29:48.921466 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_user".
+2020-11-18 14:29:48.938134 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_pull_request".
+2020-11-18 14:29:48.955394 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue".
+2020-11-18 14:29:48.971560 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_merged".
+2020-11-18 14:29:48.988368 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_label".
+2020-11-18 14:29:49.004761 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_repository".
+2020-11-18 14:29:49.021312 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_pull_request_review".
+2020-11-18 14:29:49.680211 (MainThread): Found 11 models, 14 tests, 0 snapshots, 0 analyses, 155 macros, 0 operations, 0 seed files, 11 sources
+2020-11-18 14:29:49.681562 (MainThread): 
+2020-11-18 14:29:49.681898 (MainThread): Acquiring new bigquery connection "master".
+2020-11-18 14:29:49.701835 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_abij-playground_dbt_abij".
+2020-11-18 14:29:49.701987 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2020-11-18 14:29:49.702608 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-11-18 14:29:49.932083 (MainThread): 14:29:49 | Concurrency: 1 threads (target='default')
+2020-11-18 14:29:49.932260 (MainThread): 14:29:49 | 
+2020-11-18 14:29:49.934811 (Thread-1): Began running node model.github_source.stg_github_issue
+2020-11-18 14:29:49.935292 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue".
+2020-11-18 14:29:49.935454 (Thread-1): Compiling model.github_source.stg_github_issue
+2020-11-18 14:29:49.963112 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue"
+2020-11-18 14:29:49.974749 (Thread-28): handling poll request
+2020-11-18 14:29:49.975362 (Thread-28): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66b6780>]}
+2020-11-18 14:29:49.980037 (Thread-28): sending response (<Response 11954 bytes [200 OK]>) to 10.0.14.177
+2020-11-18 14:29:49.993746 (Thread-1): finished collecting timing info
+2020-11-18 14:29:49.994306 (Thread-1): Finished running node model.github_source.stg_github_issue
+2020-11-18 14:29:49.994442 (Thread-1): Began running node model.github_source.stg_github_issue_assignee
+2020-11-18 14:29:49.994655 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_assignee".
+2020-11-18 14:29:49.994736 (Thread-1): Compiling model.github_source.stg_github_issue_assignee
+2020-11-18 14:29:50.003743 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_assignee"
+2020-11-18 14:29:50.016115 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.016600 (Thread-1): Finished running node model.github_source.stg_github_issue_assignee
+2020-11-18 14:29:50.016727 (Thread-1): Began running node model.github_source.stg_github_issue_closed_history
+2020-11-18 14:29:50.016937 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_closed_history".
+2020-11-18 14:29:50.017013 (Thread-1): Compiling model.github_source.stg_github_issue_closed_history
+2020-11-18 14:29:50.025655 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_closed_history"
+2020-11-18 14:29:50.037171 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.038152 (Thread-1): Finished running node model.github_source.stg_github_issue_closed_history
+2020-11-18 14:29:50.038328 (Thread-1): Began running node model.github_source.stg_github_issue_comment
+2020-11-18 14:29:50.038628 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_comment".
+2020-11-18 14:29:50.038734 (Thread-1): Compiling model.github_source.stg_github_issue_comment
+2020-11-18 14:29:50.049186 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_comment"
+2020-11-18 14:29:50.059739 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.060177 (Thread-1): Finished running node model.github_source.stg_github_issue_comment
+2020-11-18 14:29:50.060306 (Thread-1): Began running node model.github_source.stg_github_issue_label
+2020-11-18 14:29:50.060516 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_label".
+2020-11-18 14:29:50.060590 (Thread-1): Compiling model.github_source.stg_github_issue_label
+2020-11-18 14:29:50.069166 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_label"
+2020-11-18 14:29:50.082212 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.082640 (Thread-1): Finished running node model.github_source.stg_github_issue_label
+2020-11-18 14:29:50.082755 (Thread-1): Began running node model.github_source.stg_github_issue_merged
+2020-11-18 14:29:50.082954 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_merged".
+2020-11-18 14:29:50.083026 (Thread-1): Compiling model.github_source.stg_github_issue_merged
+2020-11-18 14:29:50.091463 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_merged"
+2020-11-18 14:29:50.103200 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.103632 (Thread-1): Finished running node model.github_source.stg_github_issue_merged
+2020-11-18 14:29:50.103751 (Thread-1): Began running node model.github_source.stg_github_pull_request
+2020-11-18 14:29:50.103952 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_pull_request".
+2020-11-18 14:29:50.104025 (Thread-1): Compiling model.github_source.stg_github_pull_request
+2020-11-18 14:29:50.113059 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_pull_request"
+2020-11-18 14:29:50.124664 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.125088 (Thread-1): Finished running node model.github_source.stg_github_pull_request
+2020-11-18 14:29:50.125201 (Thread-1): Began running node model.github_source.stg_github_pull_request_review
+2020-11-18 14:29:50.125401 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_pull_request_review".
+2020-11-18 14:29:50.125473 (Thread-1): Compiling model.github_source.stg_github_pull_request_review
+2020-11-18 14:29:50.133843 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_pull_request_review"
+2020-11-18 14:29:50.147626 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.148049 (Thread-1): Finished running node model.github_source.stg_github_pull_request_review
+2020-11-18 14:29:50.148162 (Thread-1): Began running node model.github_source.stg_github_repository
+2020-11-18 14:29:50.148360 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_repository".
+2020-11-18 14:29:50.148432 (Thread-1): Compiling model.github_source.stg_github_repository
+2020-11-18 14:29:50.156756 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_repository"
+2020-11-18 14:29:50.170329 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.170741 (Thread-1): Finished running node model.github_source.stg_github_repository
+2020-11-18 14:29:50.170852 (Thread-1): Began running node model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:29:50.171049 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_requested_reviewer_history".
+2020-11-18 14:29:50.171120 (Thread-1): Compiling model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:29:50.179533 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_requested_reviewer_history"
+2020-11-18 14:29:50.194255 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.194678 (Thread-1): Finished running node model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:29:50.194790 (Thread-1): Began running node model.github_source.stg_github_user
+2020-11-18 14:29:50.194989 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_user".
+2020-11-18 14:29:50.195061 (Thread-1): Compiling model.github_source.stg_github_user
+2020-11-18 14:29:50.207199 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_user"
+2020-11-18 14:29:50.219006 (Thread-1): finished collecting timing info
+2020-11-18 14:29:50.219435 (Thread-1): Finished running node model.github_source.stg_github_user
+2020-11-18 14:29:50.234730 (MainThread): Acquiring new bigquery connection "master".
+2020-11-18 14:29:50.234964 (MainThread): 14:29:50 | 
+2020-11-18 14:29:50.235033 (MainThread): 14:29:50 | Finished running  in 0.55s.
+2020-11-18 14:29:50.235091 (MainThread): Connection 'master' was properly closed.
+2020-11-18 14:29:50.235136 (MainThread): Connection 'model.github_source.stg_github_user' was properly closed.
+2020-11-18 14:29:51.267669 (Thread-29): handling poll request
+2020-11-18 14:29:51.268189 (Thread-29): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f647be48>]}
+2020-11-18 14:29:51.275882 (Thread-29): sending response (<Response 30182 bytes [200 OK]>) to 10.0.14.177
+2020-11-18 14:29:51.591050 (Thread-30): handling status request
+2020-11-18 14:29:51.591530 (Thread-30): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f63c9f60>]}
+2020-11-18 14:29:51.596516 (Thread-30): sending response (<Response 12370 bytes [200 OK]>) to 10.0.5.154
+2020-11-18 14:37:50.238183 (Thread-31): handling status request
+2020-11-18 14:37:50.240111 (Thread-31): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f6401a20>]}
+2020-11-18 14:37:50.242256 (Thread-31): Checking header 'user-agent' tracing in whitelist set(), 44 additional messages skipped
+2020-11-18 14:37:50.244772 (Thread-32): handling status request
+2020-11-18 14:37:50.245161 (Thread-32): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f639a198>]}
+2020-11-18 14:37:50.264775 (Thread-31): writing 1 spans (enabled:True), 123 additional messages skipped
+2020-11-18 14:37:50.264948 (Thread-31): 
+      name requests.request
+        id 496902735292192141
+  trace_id 3529608048990601524
+ parent_id None
+   service requests
+  resource requests.request
+      type http
+     start 1605710270.241761
+       end 1605710270.264688
+  duration 0.022927s
+     error 0
+      tags 
+           http.method:POST
+           http.status_code:200
+           http.url:https://fishtownanalytics.sinter-collect.com/com.snowplowanalytics.snowplow/tp2
+           runtime-id:640e5b48d5bc48208f56c906db50b99f, 129 additional messages skipped
+2020-11-18 14:37:50.270727 (Thread-31): sending response (<Response 12370 bytes [200 OK]>) to 10.0.5.154
+2020-11-18 14:37:50.275417 (Thread-32): sending response (<Response 12370 bytes [200 OK]>) to 10.0.34.241
+2020-11-18 14:37:50.373928 (AgentWriter): reported 1 traces in 0.00350s, 1 additional messages skipped
+2020-11-18 14:37:50.374121 (AgentWriter): initialized RateSampler, sample 100% of traces, 63 additional messages skipped
+2020-11-18 14:37:50.587334 (Thread-33): handling cli_args request
+2020-11-18 14:37:50.587744 (Thread-33): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f63c98d0>]}
+2020-11-18 14:37:51.547892 (Thread-33): sending response (<Response 137 bytes [200 OK]>) to 10.0.34.62
+2020-11-18 14:37:51.615266 (MainThread): Partial parsing not enabled
+2020-11-18 14:37:51.616562 (MainThread): Parsing macros/adapters.sql
+2020-11-18 14:37:51.636717 (MainThread): Parsing macros/etc.sql
+2020-11-18 14:37:51.638111 (MainThread): Parsing macros/catalog.sql
+2020-11-18 14:37:51.644148 (MainThread): Parsing macros/materializations/table.sql
+2020-11-18 14:37:51.654358 (MainThread): Parsing macros/materializations/view.sql
+2020-11-18 14:37:51.657251 (MainThread): Parsing macros/materializations/copy.sql
+2020-11-18 14:37:51.661784 (MainThread): Parsing macros/materializations/seed.sql
+2020-11-18 14:37:51.664588 (MainThread): Parsing macros/materializations/incremental.sql
+2020-11-18 14:37:51.677817 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-11-18 14:37:51.680607 (MainThread): Parsing macros/core.sql
+2020-11-18 14:37:51.684408 (MainThread): Parsing macros/adapters/common.sql
+2020-11-18 14:37:51.728153 (MainThread): Parsing macros/materializations/helpers.sql
+2020-11-18 14:37:51.737478 (MainThread): Parsing macros/materializations/table/table.sql
+2020-11-18 14:37:51.744578 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-11-18 14:37:51.765759 (MainThread): Parsing macros/materializations/view/view.sql
+2020-11-18 14:37:51.772259 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-11-18 14:37:51.777398 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-11-18 14:37:51.779366 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-11-18 14:37:51.785778 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-11-18 14:37:51.800164 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-11-18 14:37:51.817708 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-11-18 14:37:51.819613 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-11-18 14:37:51.845771 (Thread-34): handling poll request
+2020-11-18 14:37:51.846299 (Thread-34): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65dc128>]}
+2020-11-18 14:37:51.849927 (Thread-34): sending response (<Response 6627 bytes [200 OK]>) to 10.0.18.208
+2020-11-18 14:37:51.848802 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-11-18 14:37:51.850910 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-11-18 14:37:51.852575 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-11-18 14:37:51.854419 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-11-18 14:37:51.857253 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-11-18 14:37:51.859087 (MainThread): Parsing macros/etc/query.sql
+2020-11-18 14:37:51.860247 (MainThread): Parsing macros/etc/datetime.sql
+2020-11-18 14:37:51.869426 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-11-18 14:37:51.870520 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-11-18 14:37:51.872244 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-11-18 14:37:51.883500 (MainThread): Partial parsing not enabled
+2020-11-18 14:37:51.930789 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_closed_history".
+2020-11-18 14:37:51.957239 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_requested_reviewer_history".
+2020-11-18 14:37:51.973305 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_comment".
+2020-11-18 14:37:51.989964 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_assignee".
+2020-11-18 14:37:52.006565 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_user".
+2020-11-18 14:37:52.022716 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_pull_request".
+2020-11-18 14:37:52.039432 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue".
+2020-11-18 14:37:52.055426 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_merged".
+2020-11-18 14:37:52.071736 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_issue_label".
+2020-11-18 14:37:52.087565 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_repository".
+2020-11-18 14:37:52.103905 (MainThread): Acquiring new bigquery connection "model.github_source.stg_github_pull_request_review".
+2020-11-18 14:37:52.760027 (MainThread): Found 11 models, 14 tests, 0 snapshots, 0 analyses, 155 macros, 0 operations, 0 seed files, 11 sources
+2020-11-18 14:37:52.761379 (MainThread): 
+2020-11-18 14:37:52.761693 (MainThread): Acquiring new bigquery connection "master".
+2020-11-18 14:37:52.781439 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_abij-playground_dbt_abij".
+2020-11-18 14:37:52.781560 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2020-11-18 14:37:52.782254 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-11-18 14:37:53.010642 (MainThread): 14:37:53 | Concurrency: 1 threads (target='default')
+2020-11-18 14:37:53.010780 (MainThread): 14:37:53 | 
+2020-11-18 14:37:53.012638 (Thread-1): Began running node model.github_source.stg_github_issue
+2020-11-18 14:37:53.012988 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue".
+2020-11-18 14:37:53.013095 (Thread-1): Compiling model.github_source.stg_github_issue
+2020-11-18 14:37:53.030786 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue"
+2020-11-18 14:37:53.052832 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.053575 (Thread-1): Finished running node model.github_source.stg_github_issue
+2020-11-18 14:37:53.053804 (Thread-1): Began running node model.github_source.stg_github_issue_assignee
+2020-11-18 14:37:53.054162 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_assignee".
+2020-11-18 14:37:53.054296 (Thread-1): Compiling model.github_source.stg_github_issue_assignee
+2020-11-18 14:37:53.068602 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_assignee"
+2020-11-18 14:37:53.085106 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.085823 (Thread-1): Finished running node model.github_source.stg_github_issue_assignee
+2020-11-18 14:37:53.086013 (Thread-1): Began running node model.github_source.stg_github_issue_closed_history
+2020-11-18 14:37:53.086336 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_closed_history".
+2020-11-18 14:37:53.086450 (Thread-1): Compiling model.github_source.stg_github_issue_closed_history
+2020-11-18 14:37:53.100574 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_closed_history"
+2020-11-18 14:37:53.118113 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.118739 (Thread-1): Finished running node model.github_source.stg_github_issue_closed_history
+2020-11-18 14:37:53.118914 (Thread-1): Began running node model.github_source.stg_github_issue_comment
+2020-11-18 14:37:53.119234 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_comment".
+2020-11-18 14:37:53.119349 (Thread-1): Compiling model.github_source.stg_github_issue_comment
+2020-11-18 14:37:53.130593 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_comment"
+2020-11-18 14:37:53.148133 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.148716 (Thread-1): Finished running node model.github_source.stg_github_issue_comment
+2020-11-18 14:37:53.148896 (Thread-1): Began running node model.github_source.stg_github_issue_label
+2020-11-18 14:37:53.149161 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_label".
+2020-11-18 14:37:53.149243 (Thread-1): Compiling model.github_source.stg_github_issue_label
+2020-11-18 14:37:53.160433 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_label"
+2020-11-18 14:37:53.181352 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.181827 (Thread-1): Finished running node model.github_source.stg_github_issue_label
+2020-11-18 14:37:53.181949 (Thread-1): Began running node model.github_source.stg_github_issue_merged
+2020-11-18 14:37:53.182174 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_issue_merged".
+2020-11-18 14:37:53.182258 (Thread-1): Compiling model.github_source.stg_github_issue_merged
+2020-11-18 14:37:53.190786 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_issue_merged"
+2020-11-18 14:37:53.213830 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.222414 (Thread-35): handling poll request
+2020-11-18 14:37:53.222867 (Thread-35): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66b5588>]}
+2020-11-18 14:37:53.214271 (Thread-1): Finished running node model.github_source.stg_github_issue_merged
+2020-11-18 14:37:53.231336 (Thread-35): sending response (<Response 24709 bytes [200 OK]>) to 10.0.37.56
+2020-11-18 14:37:53.214387 (Thread-1): Began running node model.github_source.stg_github_pull_request
+2020-11-18 14:37:53.214594 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_pull_request".
+2020-11-18 14:37:53.214669 (Thread-1): Compiling model.github_source.stg_github_pull_request
+2020-11-18 14:37:53.223925 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_pull_request"
+2020-11-18 14:37:53.241502 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.242026 (Thread-1): Finished running node model.github_source.stg_github_pull_request
+2020-11-18 14:37:53.242158 (Thread-1): Began running node model.github_source.stg_github_pull_request_review
+2020-11-18 14:37:53.242369 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_pull_request_review".
+2020-11-18 14:37:53.242446 (Thread-1): Compiling model.github_source.stg_github_pull_request_review
+2020-11-18 14:37:53.251268 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_pull_request_review"
+2020-11-18 14:37:53.278171 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.278688 (Thread-1): Finished running node model.github_source.stg_github_pull_request_review
+2020-11-18 14:37:53.278813 (Thread-1): Began running node model.github_source.stg_github_repository
+2020-11-18 14:37:53.279020 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_repository".
+2020-11-18 14:37:53.279098 (Thread-1): Compiling model.github_source.stg_github_repository
+2020-11-18 14:37:53.287983 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_repository"
+2020-11-18 14:37:53.305752 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.306262 (Thread-1): Finished running node model.github_source.stg_github_repository
+2020-11-18 14:37:53.306396 (Thread-1): Began running node model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:37:53.306624 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_requested_reviewer_history".
+2020-11-18 14:37:53.306712 (Thread-1): Compiling model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:37:53.315530 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_requested_reviewer_history"
+2020-11-18 14:37:53.331867 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.332352 (Thread-1): Finished running node model.github_source.stg_github_requested_reviewer_history
+2020-11-18 14:37:53.332477 (Thread-1): Began running node model.github_source.stg_github_user
+2020-11-18 14:37:53.332689 (Thread-1): Acquiring new bigquery connection "model.github_source.stg_github_user".
+2020-11-18 14:37:53.332782 (Thread-1): Compiling model.github_source.stg_github_user
+2020-11-18 14:37:53.342654 (Thread-1): Writing injected SQL for node "model.github_source.stg_github_user"
+2020-11-18 14:37:53.359957 (Thread-1): finished collecting timing info
+2020-11-18 14:37:53.360437 (Thread-1): Finished running node model.github_source.stg_github_user
+2020-11-18 14:37:53.416391 (MainThread): Acquiring new bigquery connection "master".
+2020-11-18 14:37:53.416690 (MainThread): 14:37:53 | 
+2020-11-18 14:37:53.416764 (MainThread): 14:37:53 | Finished running  in 0.66s.
+2020-11-18 14:37:53.416824 (MainThread): Connection 'master' was properly closed.
+2020-11-18 14:37:53.416868 (MainThread): Connection 'model.github_source.stg_github_user' was properly closed.
+2020-11-18 14:37:54.514530 (Thread-36): handling poll request
+2020-11-18 14:37:54.515029 (Thread-36): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f636fa20>]}
+2020-11-18 14:37:54.519932 (Thread-36): sending response (<Response 15989 bytes [200 OK]>) to 10.0.14.186
+2020-11-18 14:37:54.825672 (Thread-37): handling status request
+2020-11-18 14:37:54.826213 (Thread-37): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f669f0f0>]}
+2020-11-18 14:37:54.831318 (Thread-37): sending response (<Response 12370 bytes [200 OK]>) to 10.0.44.246
+2020-11-18 14:41:34.711607 (Thread-38): handling status request
+2020-11-18 14:41:34.713618 (Thread-38): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f6fb39e8>]}
+2020-11-18 14:41:34.718710 (Thread-38): sending response (<Response 12370 bytes [200 OK]>) to 10.0.34.62
+2020-11-18 14:41:35.938681 (Thread-39): handling status request
+2020-11-18 14:41:35.939202 (Thread-39): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f634f518>]}
+2020-11-18 14:41:35.944041 (Thread-39): sending response (<Response 12370 bytes [200 OK]>) to 10.0.3.20
+2020-11-18 14:41:54.818425 (Thread-40): handling status request
+2020-11-18 14:41:54.818920 (Thread-40): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66cb358>]}
+2020-11-18 14:41:54.823738 (Thread-40): sending response (<Response 12370 bytes [200 OK]>) to 10.0.5.154
+2020-11-18 14:41:55.043589 (Thread-41): handling ps request
+2020-11-18 14:41:55.044143 (Thread-41): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d9eb8>]}
+2020-11-18 14:41:55.045588 (Thread-41): sending response (<Response 907 bytes [200 OK]>) to 10.0.14.186
+2020-11-18 14:41:55.385482 (Thread-42): handling poll request
+2020-11-18 14:41:55.386023 (Thread-42): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d90b8>]}
+2020-11-18 14:41:55.398844 (Thread-42): sending response (<Response 46755 bytes [200 OK]>) to 10.0.34.241
+2020-11-18 14:41:55.692756 (Thread-43): handling status request
+2020-11-18 14:41:55.693279 (Thread-43): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f637ec88>]}
+2020-11-18 14:41:55.698296 (Thread-43): sending response (<Response 12370 bytes [200 OK]>) to 10.0.3.20
+2020-11-18 14:42:38.929706 (Thread-44): handling status request
+2020-11-18 14:42:38.930254 (Thread-44): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d7a90>]}
+2020-11-18 14:42:38.935329 (Thread-44): sending response (<Response 12370 bytes [200 OK]>) to 10.0.14.29
+2020-11-18 14:42:49.666624 (Thread-45): handling status request
+2020-11-18 14:42:49.667141 (Thread-45): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65dc080>]}
+2020-11-18 14:42:49.672020 (Thread-45): sending response (<Response 12370 bytes [200 OK]>) to 10.0.18.40
+2020-11-18 14:42:49.967119 (Thread-46): handling run_sql request
+2020-11-18 14:42:49.967627 (Thread-46): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66a6f28>]}
+2020-11-18 14:42:50.918792 (Thread-46): sending response (<Response 137 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:42:50.945091 (MainThread): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:42:50.966655 (MainThread): Found 11 models, 14 tests, 0 snapshots, 0 analyses, 155 macros, 0 operations, 0 seed files, 11 sources
+2020-11-18 14:42:50.967117 (Thread-1): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:42:50.967264 (Thread-1): Compiling rpc.github_source.request
+2020-11-18 14:42:50.983188 (Thread-1): finished collecting timing info
+2020-11-18 14:42:50.983487 (Thread-1): Opening a new connection, currently in state init
+2020-11-18 14:42:50.984066 (Thread-1): On rpc.github_source.request: 
+
+  select 0 as number  union all 
+
+
+
+  select 1 as number  union all 
+
+
+
+  select 2 as number  union all 
+
+
+
+  select 3 as number  union all 
+
+
+
+  select 4 as number  union all 
+
+
+
+  select 5 as number  union all 
+
+
+
+  select 6 as number  union all 
+
+
+
+  select 7 as number  union all 
+
+
+
+  select 8 as number  union all 
+
+
+
+  select 9 as number 
+
+
+
+limit 100
+2020-11-18 14:42:51.239662 (Thread-47): handling poll request
+2020-11-18 14:42:51.240216 (Thread-47): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66db588>]}
+2020-11-18 14:42:51.242496 (Thread-47): sending response (<Response 2943 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:42:52.231194 (Thread-1): finished collecting timing info
+2020-11-18 14:42:52.514872 (Thread-48): handling poll request
+2020-11-18 14:42:52.515358 (Thread-48): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66cbc88>]}
+2020-11-18 14:42:52.520296 (Thread-48): sending response (<Response 3788 bytes [200 OK]>) to 10.0.23.22
+2020-11-18 14:43:22.794099 (Thread-49): handling status request
+2020-11-18 14:43:22.794602 (Thread-49): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66db2b0>]}
+2020-11-18 14:43:22.799942 (Thread-49): sending response (<Response 12370 bytes [200 OK]>) to 10.0.23.22
+2020-11-18 14:43:23.083236 (Thread-50): handling run_sql request
+2020-11-18 14:43:23.083788 (Thread-50): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66db7f0>]}
+2020-11-18 14:43:24.013784 (Thread-50): sending response (<Response 137 bytes [200 OK]>) to 10.0.21.190
+2020-11-18 14:43:24.040053 (MainThread): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:43:24.060226 (MainThread): Found 11 models, 14 tests, 0 snapshots, 0 analyses, 155 macros, 0 operations, 0 seed files, 11 sources
+2020-11-18 14:43:24.060675 (Thread-1): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:43:24.060808 (Thread-1): Compiling rpc.github_source.request
+2020-11-18 14:43:24.074560 (Thread-1): finished collecting timing info
+2020-11-18 14:43:24.074847 (Thread-1): Opening a new connection, currently in state init
+2020-11-18 14:43:24.075417 (Thread-1): On rpc.github_source.request: select * from repository
+limit 100
+2020-11-18 14:43:24.293110 (Thread-51): handling poll request
+2020-11-18 14:43:24.293661 (Thread-51): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f6f3d8d0>]}
+2020-11-18 14:43:24.295977 (Thread-51): sending response (<Response 2575 bytes [200 OK]>) to 10.0.30.126
+2020-11-18 14:43:24.365541 (Thread-1): Retry attempt 1 of 1 after error: BadRequest('Table name "repository" missing dataset while no default dataset is set in the request.',)
+2020-11-18 14:43:25.550669 (Thread-1): finished collecting timing info
+2020-11-18 14:43:25.551095 (Thread-1): Got an exception: Database Error
+  Table name "repository" missing dataset while no default dataset is set in the request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 103, in exception_handler
+    yield
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 447, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/usr/local/lib/python3.6/dist-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 266, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 428, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.6/dist-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.6/dist-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.6/dist-packages/google/api_core/future/polling.py", line 130, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Table name "repository" missing dataset while no default dataset is set in the request.
+
+(job ID: 577b15ef-f35a-43d8-b9d8-c967d64d21d4)
+
+-----Query Job SQL Follows-----
+
+    |    .    |    .    |
+   1:select * from repository
+   2:limit 100
+    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/base.py", line 333, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/base.py", line 276, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/base.py", line 378, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/node_runners.py", line 85, in execute
+    compiled_node.injected_sql, fetch=True
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/base/impl.py", line 227, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 275, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 268, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 447, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/usr/lib/python3.6/contextlib.py", line 99, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 107, in exception_handler
+    self.handle_error(e, message)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/adapters/bigquery/connections.py", line 95, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error
+  Table name "repository" missing dataset while no default dataset is set in the request.
+2020-11-18 14:43:25.553105 (Thread-1): Got exception RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system)\n  Table name "repository" missing dataset while no default dataset is set in the request.', 'raw_sql': 'select * from repository\nlimit 100', 'compiled_sql': 'select * from repository\nlimit 100', 'tags': None}, None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/sql_commands.py", line 145, in _in_thread
+    self.node_results.append(runner.safe_run(self.manifest))
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/base.py", line 349, in safe_run
+    result = self.error_result(ctx.node, error, started, [])
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/node_runners.py", line 52, in error_result
+    raise error
+dbt.rpc.error.RPCException: RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system)\n  Table name "repository" missing dataset while no default dataset is set in the request.', 'raw_sql': 'select * from repository\nlimit 100', 'compiled_sql': 'select * from repository\nlimit 100', 'tags': None}, None)
+2020-11-18 14:43:25.561537 (Thread-52): handling poll request
+2020-11-18 14:43:25.562070 (Thread-52): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65dc0b8>]}
+2020-11-18 14:43:25.563566 (Thread-52): sending response (<Response 6419 bytes [200 OK]>) to 10.0.18.208
+2020-11-18 14:43:26.883506 (Thread-53): handling poll request
+2020-11-18 14:43:26.883994 (Thread-53): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65d2160>]}
+2020-11-18 14:43:26.884893 (Thread-53): sending response (<Response 8692 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:43:36.380163 (Thread-54): handling status request
+2020-11-18 14:43:36.380671 (Thread-54): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d7c18>]}
+2020-11-18 14:43:36.385707 (Thread-54): sending response (<Response 12370 bytes [200 OK]>) to 10.0.18.208
+2020-11-18 14:43:36.674383 (Thread-55): handling run_sql request
+2020-11-18 14:43:36.674782 (Thread-55): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65d21d0>]}
+2020-11-18 14:43:37.619196 (Thread-55): sending response (<Response 137 bytes [200 OK]>) to 10.0.14.29
+2020-11-18 14:43:37.645132 (MainThread): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:43:37.665373 (MainThread): Found 11 models, 14 tests, 0 snapshots, 0 analyses, 155 macros, 0 operations, 0 seed files, 11 sources
+2020-11-18 14:43:37.665839 (Thread-1): Acquiring new bigquery connection "rpc.github_source.request".
+2020-11-18 14:43:37.665973 (Thread-1): Compiling rpc.github_source.request
+2020-11-18 14:43:37.679712 (Thread-1): finished collecting timing info
+2020-11-18 14:43:37.680009 (Thread-1): Opening a new connection, currently in state init
+2020-11-18 14:43:37.680574 (Thread-1): On rpc.github_source.request: select * from github.repository
+limit 100
+2020-11-18 14:43:37.905385 (Thread-56): handling poll request
+2020-11-18 14:43:37.906307 (Thread-56): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d96d8>]}
+2020-11-18 14:43:37.908490 (Thread-56): sending response (<Response 2583 bytes [200 OK]>) to 10.0.5.154
+2020-11-18 14:43:39.191503 (Thread-57): handling poll request
+2020-11-18 14:43:39.191995 (Thread-57): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f65d23c8>]}
+2020-11-18 14:43:39.193005 (Thread-57): sending response (<Response 394 bytes [200 OK]>) to 10.0.5.154
+2020-11-18 14:43:40.008065 (Thread-1): finished collecting timing info
+2020-11-18 14:43:40.505005 (Thread-58): handling poll request
+2020-11-18 14:43:40.505496 (Thread-58): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f639a320>]}
+2020-11-18 14:43:40.510160 (Thread-58): sending response (<Response 2791 bytes [200 OK]>) to 10.0.34.62
+2020-11-18 14:44:03.729673 (Thread-59): handling status request
+2020-11-18 14:44:03.730201 (Thread-59): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66cbb70>]}
+2020-11-18 14:44:03.735231 (Thread-59): sending response (<Response 12370 bytes [200 OK]>) to 10.0.44.246
+2020-11-18 14:44:05.106379 (Thread-60): handling status request
+2020-11-18 14:44:05.106876 (Thread-60): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66d9400>]}
+2020-11-18 14:44:05.111678 (Thread-60): sending response (<Response 12370 bytes [200 OK]>) to 10.0.44.246
+2020-11-18 14:44:33.550207 (Thread-61): handling status request
+2020-11-18 14:44:33.550731 (Thread-61): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f6f3d4e0>]}
+2020-11-18 14:44:33.552592 (Thread-61): Checking header 'user-agent' tracing in whitelist set(), 24 additional messages skipped
+2020-11-18 14:44:33.574627 (Thread-61): writing 1 spans (enabled:True)
+2020-11-18 14:44:33.574820 (Thread-61): 
+      name requests.request
+        id 13218714025397236612
+  trace_id 5058178511094531014
+ parent_id None
+   service requests
+  resource requests.request
+      type http
+     start 1605710673.552109
+       end 1605710673.574533
+  duration 0.022424s
+     error 0
+      tags 
+           http.method:POST
+           http.status_code:200
+           http.url:https://fishtownanalytics.sinter-collect.com/com.snowplowanalytics.snowplow/tp2
+           runtime-id:640e5b48d5bc48208f56c906db50b99f
+2020-11-18 14:44:33.580804 (Thread-61): sending response (<Response 12370 bytes [200 OK]>) to 10.0.41.79
+2020-11-18 14:44:33.683774 (Thread-62): handling ps request
+2020-11-18 14:44:33.684208 (Thread-62): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f61f3390>]}
+2020-11-18 14:44:33.686213 (Thread-62): sending response (<Response 2429 bytes [200 OK]>) to 10.0.30.126
+2020-11-18 14:44:34.043430 (Thread-63): handling poll request
+2020-11-18 14:44:34.043920 (Thread-63): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f61f3940>]}
+2020-11-18 14:44:34.057246 (Thread-63): sending response (<Response 46755 bytes [200 OK]>) to 10.0.34.62
+2020-11-18 14:44:34.364648 (Thread-64): handling status request
+2020-11-18 14:44:34.365141 (Thread-64): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f66cbcc0>]}
+2020-11-18 14:44:34.370216 (Thread-64): sending response (<Response 12370 bytes [200 OK]>) to 10.0.14.29
+2020-11-18 14:44:34.423549 (AgentWriter): reported 1 traces in 0.00388s
+2020-11-18 14:44:34.423840 (AgentWriter): initialized RateSampler, sample 100% of traces, 31 additional messages skipped
+2020-11-18 14:45:17.297240 (Thread-65): handling status request
+2020-11-18 14:45:17.297763 (Thread-65): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f61f3ba8>]}
+2020-11-18 14:45:17.302626 (Thread-65): sending response (<Response 12370 bytes [200 OK]>) to 10.0.18.40
+2020-11-18 14:45:33.084206 (Thread-66): handling status request
+2020-11-18 14:45:33.084808 (Thread-66): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'be1cf288-3e92-406a-aba0-5183166e70fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f18f61e7668>]}
+2020-11-18 14:45:33.089993 (Thread-66): sending response (<Response 12370 bytes [200 OK]>) to 10.0.37.56
