@@ -1,0 +1,276 @@
+version: 2
+
+models:
+  - name: github_issues
+    description: >
+      Basic information about issues as well as additional fields for things like assignees, projects, labels and open time
+    columns:
+      - name: issue_id
+        description: The unique ID of an issue.
+        tests:
+          - unique
+          - not_null
+
+      - name: body
+        description: The text body of the issue's main description
+
+      - name: closed_at
+        description: The timestamp for when an issue was last closed.  "null" for issues that are open
+
+      - name: created_at
+        description: The timestamp for when an issue was created
+
+      - name: number
+        description: The number of the issue.  Is unique within a repository, but not accross
+
+      - name: state
+        description: Whether the issue is open or closed
+
+      - name: title
+        description: The title of the issue
+
+      - name: updated_at
+        description: Timestamp of when the issue was last updated
+
+      - name: url_link
+        description: a link to the issue on github.com
+
+      - name: days_issue_open
+        description: The number of days an issue has been open
+
+      - name: labels
+        description: A list of the labels that are currently applied to the issue
+
+      - name: projects
+        description: A list of project boards that the issue has been assigned to
+
+      - name: repository
+        description: The repository that the issue is applicable to
+
+      - name: milestone
+        description: The planning milestone that the issue is currently included in
+
+      - name: milestone_due_on
+        description: The due date of the milestone that the issue is currently included in
+
+      - name: assignees
+        description: The current list of users assigned to the issue
+
+      - name: days_blocked
+        description: The number of days an issue has had a label the includes the 'blocked'
+
+      - name: inbox_days
+        description: The number of days an issue was in a status including "inbox" within a project
+
+      - name: created_by
+        description: The user who created the issue
+
+  - name: github_pull_requests
+    description: >
+      Basic information about pull_requests as well as additional fields about reviews and time between actions
+    columns:
+      - name: issue_id
+        description: The unique ID of an issue.
+        tests:
+          - unique
+          - not_null
+
+      - name: body
+        description: the text body of the description of the pull request
+
+      - name: closed_at
+        description: Timestamp of when the pull request was closed.  NULL for pull requests that are still open
+
+      - name: created_at
+        description: Timestamp of when the pull request was created
+
+      - name: number
+        description: The number of the pull request.  Unique within a repository, but not accross.
+
+      - name: state
+        description: Whether the pull request is open or closed.
+
+      - name: title
+        description: The title of the pull request
+
+      - name: url_link
+        description: A link to the pull request on github.com
+
+      - name: days_pr_open
+        description: The number of days a pull request has been open
+
+      - name: labels
+        description: The labels currently applied to the pull request
+
+      - name: repository
+        description: The repository that the pull request applies to
+
+      - name: assignees
+        description: Users who have been assigned to the pull request
+
+      - name: created_by
+        description: The User who created the pull request
+        
+      - name: hours_request_review_to_first_review
+        description: Number of hours between the first request for review and a review
+
+      - name: hours_request_review_to_first_action
+        description: Number of hours between the first request for review and any action besides dismissing the request
+
+      - name: hours_request_review_to_merge
+        description: Number of hours between the first request for review and the pull request being merged
+
+      - name: merged_at
+        description: Timestamp of when the pull request was merged
+
+      - name: reviwers
+        description: List of Users who reviewed the pull request
+
+      - name: number_of_reviews
+        description: Number of times a pull request was reviewed
+
+  - name: github_daily_metrics
+    description: >
+      Summary numbers for issues and pull requests by day
+    columns:
+      - name: day
+        description: The reporting day
+        tests:
+          - unique
+          - not_null
+      - name: number_issues_opened
+        description: The total number of issues created during this time period
+
+      - name: number_issues_closed
+        description: The total number of issues closed during this time period
+
+      - name: avg_days_issue_open
+        description: The average number of days an issue opened during this time period was open
+
+      - name: longest_days_issue_open
+        description: The longest number of days an issue opened during this time period was open
+
+      - name: number_prs_opened
+        description: The total number of pull requests created during this time period
+
+      - name: number_prs_merged
+        description: The total number of pull requests merged during this time period
+      
+      - name: number_prs_closed_without_merge
+        description: The total number of pull requests closed without a merge during this time period
+
+      - name: avg_days_pr_open
+        description: The average number of days a pull request opened during this time period was open
+
+      - name: longest_days_pr_open
+        description: The longest number of days a pull request opened during this time period was open
+
+
+  - name: github_weekly_metrics
+    description: >
+      Summary numbers for issues and pull requests by week
+    columns:
+      - name: week
+        description: The reporting week
+        tests:
+          - unique
+          - not_null
+      - name: number_issues_opened
+        description: The total number of issues created during this time period
+
+      - name: number_issues_closed
+        description: The total number of issues closed during this time period
+
+      - name: avg_days_issue_open
+        description: The average number of days an issue opened during this time period was open
+
+      - name: longest_days_issue_open
+        description: The longest number of days an issue opened during this time period was open
+
+      - name: number_prs_opened
+        description: The total number of pull requests created during this time period
+
+      - name: number_prs_merged
+        description: The total number of pull requests merged during this time period
+      
+      - name: number_prs_closed_without_merge
+        description: The total number of pull requests closed without a merge during this time period
+
+      - name: avg_days_pr_open
+        description: The average number of days a pull request opened during this time period was open
+
+      - name: longest_days_pr_open
+        description: The longest number of days a pull request opened during this time period was open
+        
+  - name: github_monthly_metrics
+    description: >
+      Summary numbers for issues and pull requests by month
+    columns:
+      - name: month
+        description: The reporting month
+        tests:
+          - unique
+          - not_null
+      - name: number_issues_opened
+        description: The total number of issues created during this time period
+
+      - name: number_issues_closed
+        description: The total number of issues closed during this time period
+
+      - name: avg_days_issue_open
+        description: The average number of days an issue opened during this time period was open
+
+      - name: longest_days_issue_open
+        description: The longest number of days an issue opened during this time period was open
+
+      - name: number_prs_opened
+        description: The total number of pull requests created during this time period
+
+      - name: number_prs_merged
+        description: The total number of pull requests merged during this time period
+      
+      - name: number_prs_closed_without_merge
+        description: The total number of pull requests closed without a merge during this time period
+
+      - name: avg_days_pr_open
+        description: The average number of days a pull request opened during this time period was open
+
+      - name: longest_days_pr_open
+        description: The longest number of days a pull request opened during this time period was open
+        
+  - name: github_quarterly_metrics
+    description: >
+      Summary numbers for issues and pull requests by quarter
+    columns:
+      - name: quarter
+        description: The reporting quarter
+        tests:
+          - unique
+          - not_null
+      - name: number_issues_opened
+        description: The total number of issues created during this time period
+
+      - name: number_issues_closed
+        description: The total number of issues closed during this time period
+
+      - name: avg_days_issue_open
+        description: The average number of days an issue opened during this time period was open
+
+      - name: longest_days_issue_open
+        description: The longest number of days an issue opened during this time period was open
+
+      - name: number_prs_opened
+        description: The total number of pull requests created during this time period
+
+      - name: number_prs_merged
+        description: The total number of pull requests merged during this time period
+      
+      - name: number_prs_closed_without_merge
+        description: The total number of pull requests closed without a merge during this time period
+
+      - name: avg_days_pr_open
+        description: The average number of days a pull request opened during this time period was open
+
+      - name: longest_days_pr_open
+        description: The longest number of days a pull request opened during this time period was open
+                
