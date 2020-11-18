@@ -28,7 +28,6 @@ sources:
           - name: user_id
             description: Foreign key that references the user table
 
-
       - name: issue_closed_history
         description: Table to track when an issue is closed or re-opened
         loaded_at_field: _fivetran_synced
